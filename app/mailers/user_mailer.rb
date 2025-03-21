@@ -10,6 +10,7 @@ class UserMailer < ApplicationMailer
     # BEGIN
     @user_email = params[:user_email]
     @user_token = params[:user_token]
+    @user_name = params[:user_name]
     mail(to: @user_email, subject: I18n.t('.user_mailer.account_activation.subject'))
     # END
   end
